@@ -6,6 +6,10 @@ import (
 )
 
 func StringToBytes(s string) []byte {
+	return Decode([]byte(s))
+}
+
+func Decode(s []byte) []byte {
 	if len(s)%2 != 0 {
 		panic("invalid input length not multiple of 2")
 	}
