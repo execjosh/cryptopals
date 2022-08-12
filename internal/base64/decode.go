@@ -26,7 +26,7 @@ func Decode(input []byte) []byte {
 
 	var block uint32
 	var idx int
-	for _, x := range []byte(input) {
+	for _, x := range input {
 		b := strings.IndexByte(alphabet, x)
 		if b < 0 {
 			panic(fmt.Errorf("invalid base64 byte: %#U", x))
